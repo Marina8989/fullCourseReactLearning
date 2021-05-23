@@ -14,8 +14,21 @@
     <div id="root"></div>
 
     <script type="text/babel">
-        //let el = React.createElement('h1', null, 'React by Marina');
-         let myel = <div>Hello JSX</div>;
+    let myTitle = 'Hello Marina';
+
+    function MyH1() {
+        return (
+             <div>
+                <h1>
+                    <span>{myTitle}</span>
+                </h1>
+            </div>
+        )
+    }
+        
+         let myel = (
+             <MyH1></MyH1>
+         )
 
         ReactDOM.render(myel, document.getElementById('root'));
     </script>
