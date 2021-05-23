@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
     <title>React Tutorial</title>
 </head>
 <body>
     
     <div id="root"></div>
 
-    <script>
-        let root = document.getElementById('root');
-        let el = React.createElement('h1', null, 'React by Marina');
-        ReactDOM.render(el, document.getElementById('root'));
+    <script type="text/babel">
+        //let el = React.createElement('h1', null, 'React by Marina');
+         let myel = <div>Hello JSX</div>;
+
+        ReactDOM.render(myel, document.getElementById('root'));
     </script>
 </body>
 </html>
