@@ -14,9 +14,10 @@
     <div id="root"></div>
 
     <script type="text/babel">
-    let myTitle = 'Hello Marina';
+    
 
-    function MyH1() {
+    function MyH1({myTitle}) {
+        console.log(props);
         return (
              <div>
                 <h1>
@@ -25,12 +26,22 @@
             </div>
         )
     }
+    
         
-         let myel = (
-             <MyH1></MyH1>
-         )
+         let Myel = () => { 
+             let myTitle = 'Hello Marina';
 
-        ReactDOM.render(myel, document.getElementById('root'));
+            //  console.log(<MyH1 data={myTitle} />);
+             return (
+                <div>
+                   <MyH1  myTitle={myTitle}/>
+                </div>
+             )
+
+         }
+             
+         
+        ReactDOM.render(<Myel />, document.getElementById('root'));
     </script>
-</body>
+</body> 
 </html>
